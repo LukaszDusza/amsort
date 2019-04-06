@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,21 +10,20 @@
         <a href="/employeList" >Click Here and see employe list</a>
     </p>
 
-    <form action = "/res">
+    <form action = "/exchange" th:object="${payload}" method="post" th:action="@{/exchange}" > <!--tu bedzie zawsze podkreslac, tym sie nie martw-->
 
         <label>Podaj zadłużenie : <br></label>
 
-        <p>Podaj imię</p>
-        <input type="text" name="name"><br>
+        <p>od kogo:</p>
+        <input type="text" name="from"><br>
 
-        <p>Podaj ile kasy mu/jej Wisisz lub ile jesteś dłużny/a</p>
-        <input type="number" name="loan"><br>
+        <p>do kogo:</p>
+        <input type="text" name="to"><br>
 
-        <br> CHOOSE OPERATION:
-        <br>
-        <input type="submit" class="button" name="add" value="+">
-        <input type="submit" class="button" name="subtraction" value="-">
+        <p>kwota:</p>
+        <input type="number" name="value"><br>
 
+        <input type="submit" class="button" name="subtraction" value="execute">
 
     </form>
 

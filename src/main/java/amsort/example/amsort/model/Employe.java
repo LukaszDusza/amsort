@@ -4,6 +4,7 @@ package amsort.example.amsort.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +18,7 @@ public class Employe{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private double account;
+    private BigDecimal account;
 //    private double loan;
 
 }

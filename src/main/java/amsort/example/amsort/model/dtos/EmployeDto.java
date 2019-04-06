@@ -2,6 +2,8 @@ package amsort.example.amsort.model.dtos;
 
 import lombok.*;
 
+import java.math.BigDecimal;
+
 
 @Builder
 @Getter
@@ -11,6 +13,6 @@ import lombok.*;
 public class EmployeDto {
 
     private String name;
-    private double account;
+    private BigDecimal account;
 //    private double loan;
 }

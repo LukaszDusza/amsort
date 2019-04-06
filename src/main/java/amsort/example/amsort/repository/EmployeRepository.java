@@ -11,6 +11,6 @@ public interface EmployeRepository extends JpaRepository <Employe, Integer> {
     @Query("select e from Employe e where e.name = ?1")
     Optional<Employe> findByName(String name);
 
-    @Query("select e from Employe e where e.account = ?1")
-    Optional<Employe> findAccount();
+//    @Query("select e from Employe e where e.account = ?1")
+//    Optional<Employe> findAccount();
 }
